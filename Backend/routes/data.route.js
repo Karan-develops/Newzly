@@ -13,3 +13,5 @@ router.get("/get-news", getNews);
 router.post("/store-news", protectRoute, storeNews);
 
 router.delete("/delete-news", protectRoute, deleteNews);
+
+export default router;
