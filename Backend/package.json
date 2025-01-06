@@ -4,7 +4,7 @@
   "description": "A newz app",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon index.js",
+    "server": "npx nodemon index.js",
     "production": "node index.js"
   },
   "author": "karan",
