@@ -5,7 +5,7 @@ export const scheduleCronJobsUpdateData = () => {
     "0,30,59 * * * *",
     async () => {
       const API_KEY = process.env.G_NEWS_API_KEY;
-      const POST_URL = "http://localhost:3000/api/data/store-news";
+      const POST_URL = "http://localhost:5000/api/data/store-news";
 
       const countries = ["in", "br", "ca", "fr", "ie", "us"];
       const category = [
