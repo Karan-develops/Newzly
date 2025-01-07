@@ -1,5 +1,6 @@
 import express from "express";
 import { config } from "dotenv";
+import cors from "cors"
 import { connectDB } from "./config/db.js";
 
 import dataRouter from "./routes/data.route.js";
@@ -14,6 +15,13 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 
 await connectDB();
+
+const corsConfiguration = {
+  origin: ["http://localhost:3000"],
+  optionSucessStatus: 200
+}
+
+app.use(cors(corsConfiguration))
 
 app.use("/api/data", dataRouter);
 
