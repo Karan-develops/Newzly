@@ -136,6 +136,7 @@ Contributions are always welcome! Additionally you can contact me by my email: *
 
 ## 📷 Screenshots
 
+![banner](https://raw.githubusercontent.com/Karan-develops/Newzly/refs/heads/main/Screenshot%202025-01-08%20224755.png)
 
 
 ## 🔒 License

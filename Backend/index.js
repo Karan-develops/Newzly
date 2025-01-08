@@ -19,7 +19,7 @@ await connectDB();
 
 const corsConfiguration = {
   origin: ["https://newzly-karan.vercel.app/"],
-  optionSucessStatus: 200,
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsConfiguration));
