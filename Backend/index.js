@@ -18,7 +18,7 @@ app.use(express.json());
 await connectDB();
 
 const corsConfiguration = {
-  origin: ["https://newzly-karan.vercel.app/"],
+  origin: ["https://newzly-karan.vercel.app"],
   optionsSuccessStatus: 200,
 };
 
