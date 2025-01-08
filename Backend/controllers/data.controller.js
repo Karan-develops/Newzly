@@ -1,6 +1,6 @@
 import News from "../models/news.model.js";
 
-export const getNews = async (req, res) => {
+export const getNews = async (req, res) => {  
   const category = req.query.category;
   const country = req.query.country;
   const page = parseInt(req.query.page) || 1;
@@ -11,16 +11,16 @@ export const getNews = async (req, res) => {
     ...(category && { category }),
     ...(country && { country }),
   };
-
+  
   try {
     const news = await News.find(filter)
-      .sort({ date: -1 })
-      .skip(skip)
-      .limit(limit);
-
+    .sort({ date: -1 })
+    .skip(skip)
+    .limit(limit);
+    
     const total = await News.countDocuments(filter);
-
-    res.status(200).json({
+  
+    return res.status(200).json({
       page,
       total_pages: Math.ceil(total / limit),
       total_items: total,

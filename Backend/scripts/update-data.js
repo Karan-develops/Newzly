@@ -9,10 +9,10 @@ export const scheduleCronJobsUpdateData = () => {
 
       const countries = ["in", "br", "ca", "fr", "ie", "us"];
       const category = [
-        "general",
         "world",
+        "general",
         "nation",
-        "buisness",
+        "business",
         "technology",
         "entertainment",
         "sports",
