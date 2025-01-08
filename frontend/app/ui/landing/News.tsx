@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, JSX } from "react";
+import { useState, useEffect, JSX, useCallback } from "react";
 import { NewsCard } from "@/app/ui/components/NewsCard";
 import { FetchNewsLoader } from "@/app/ui/loaders";
 import { NewsCardProps } from "@/app/lib/definition";
@@ -56,7 +56,7 @@ export function News(): JSX.Element {
     limit: 105,
   });
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     if (isFetching || allItemsFetched) return;
     try {
       setIsFetching(true);
@@ -79,7 +79,7 @@ export function News(): JSX.Element {
     } finally {
       setIsFetching(false);
     }
-  };
+  }, [isFetching, allItemsFetched, configuration, page]);
 
   useEffect(() => {
     const resetAndFetch = async () => {

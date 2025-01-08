@@ -79,7 +79,7 @@ const Footer = (): JSX.Element => {
       setIsSubmitting(false);
       setIsSubmitted(true);
     } catch (error) {
-      console.log(`Some Error Occured`);
+      console.log(`Some Error Occured`,error);
       throw new Error();
     } finally {
       setIsSubmitting(false);

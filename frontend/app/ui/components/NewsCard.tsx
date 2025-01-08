@@ -1,6 +1,7 @@
 import { NewsCardProps } from "@/app/lib/definition";
 import defaultImage from "@/public/assets/news.jpeg";
 import { Globe2, MessageSquareShare } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
 
@@ -27,7 +28,7 @@ export function NewsCard({
   return (
     <div className="pb-[2px] bg-white-200 shadow-2xl rounded-lg flex flex-col gap-y-3 w-[300px] sm:w-[280px] md::w-[320px] items-center h-[470px] relative hover:scale-105 duration-300">
       <div className="h-[21rem] w-auto flex overflow-hidden items-center">
-        <img
+        <Image
           src={image_link}
           className="rounded-t-lg pointer-events-none w-auto h-auto"
           alt="news_image"
