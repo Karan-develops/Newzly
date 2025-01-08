@@ -25,7 +25,7 @@ export function NewsCard({
   ) as string;
 
   return (
-    <div className="pb-[2px] bg-white-200 shadow-2xl rounded-lg flex flex-col gap-y-3 w-[300px] sm:w-[280px] md::w-[320px] items-center h-[470px] relative">
+    <div className="pb-[2px] bg-white-200 shadow-2xl rounded-lg flex flex-col gap-y-3 w-[300px] sm:w-[280px] md::w-[320px] items-center h-[470px] relative hover:scale-105 duration-300">
       <div className="h-[21rem] w-auto flex overflow-hidden items-center">
         <img
           src={image_link}

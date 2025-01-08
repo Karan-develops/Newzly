@@ -6,7 +6,7 @@ import Link from "next/link";
 import logo from "@/public/assets/logo.png";
 
 const Navbar = () => {
-  const repoLink: string = "https://github.com/Karan-develops/newzly";
+  const repoLink: string = "https://github.com/Karan-develops/Newzly";
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "news", label: "News" },
