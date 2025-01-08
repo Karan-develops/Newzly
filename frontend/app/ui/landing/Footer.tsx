@@ -151,7 +151,7 @@ const Footer = (): JSX.Element => {
             />
           </div>
           <div className="flex flex-col gap-5 w-fit h-fit text-white">
-            <div>&#169; Newzly 2025</div>
+            <div>&#169; Newzly {new Date().getFullYear()}</div>
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#C6EA8D] to-[#FE90AF] flex flex-wrap w-80">
               Delivering news like never before. Enjoy the new way of reading.
             </div>

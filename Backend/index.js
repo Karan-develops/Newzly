@@ -1,9 +1,10 @@
 import express from "express";
 import { config } from "dotenv";
-import cors from "cors"
+import cors from "cors";
 import { connectDB } from "./config/db.js";
 
 import dataRouter from "./routes/data.route.js";
+import serviceRouter from "./routes/email.route.js";
 import { scheduleCronJobsUpdateData } from "./scripts/update-data.js";
 import { scheduleCronJobsDeleteData } from "./scripts/delete-data.js";
 
@@ -18,12 +19,13 @@ await connectDB();
 
 const corsConfiguration = {
   origin: ["http://localhost:3000"],
-  optionSucessStatus: 200
-}
+  optionSucessStatus: 200,
+};
 
-app.use(cors(corsConfiguration))
+app.use(cors(corsConfiguration));
 
 app.use("/api/data", dataRouter);
+app.use("/api/service", serviceRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({
