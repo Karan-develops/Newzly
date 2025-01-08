@@ -39,7 +39,7 @@ const Footer = (): JSX.Element => {
     const formData = new FormData(e.target as HTMLFormElement);
     const email: string = formData.get("email") as string;
     const message: string = formData.get("message") as string;
-    const POST_API_URI = "http://localhost:5000/api/service/send-email";
+    const POST_API_URI = "https://newzly.onrender.com/api/service/send-email";
 
     try {
       // Send message to creator

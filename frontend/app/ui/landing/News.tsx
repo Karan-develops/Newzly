@@ -60,7 +60,7 @@ export function News(): JSX.Element {
     if (isFetching || allItemsFetched) return;
     try {
       setIsFetching(true);
-      const API_URI = `http://localhost:5000/api/data/get-news?category=${configuration.category}&page=${page}&limit=${configuration.limit}&country=${configuration.country}`;
+      const API_URI = `https://newzly.onrender.com/api/data/get-news?category=${configuration.category}&page=${page}&limit=${configuration.limit}&country=${configuration.country}`;
 
       const res = await fetch(API_URI);
       if (res.status === 200) {

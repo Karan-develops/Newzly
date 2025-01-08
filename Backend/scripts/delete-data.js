@@ -4,7 +4,7 @@ export const scheduleCronJobsDeleteData = () => {
   cron.schedule(
     "0 0 0 * * *",
     async () => {
-      const DELETE_URL = "http://localhost:5000/api/data/delete-news";
+      const DELETE_URL = "https://newzly.onrender.com/api/data/delete-news";
       let options = {
         timeZone: "Asia/Kolkata",
         year: "numeric",
