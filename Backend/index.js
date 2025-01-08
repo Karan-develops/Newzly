@@ -27,7 +27,7 @@ app.use(cors(corsConfiguration));
 app.use("/api/data", dataRouter);
 app.use("/api/service", serviceRouter);
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
   res.status(200).json({
     message: "200 Ok, Hello World :)",
   });
